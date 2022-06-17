@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Basics</title>
+  </head>
+  <style>
+    body {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .topic {
+      font-style: italic;
+    }
+
+    .catlog {
+      list-style-type: none;
+      font-size: 20px;
+      font-style: oblique;
+      font-weight: bold;
+      padding: 2px;
+    }
+
+    a {
+      color: darkmagenta;
+    }
+
+    a:hover {
+      color: tomato;
+    }
+
+    .title {
+      color: brown;
+      font-style: italic;
+    }
+
+    .subtitle {
+      color: rebeccapurple;
+      font-style: italic;
+    }
+
+    .codeBlock {
+      background-color: whitesmoke;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    hr {
+      border: 0.5px solid rgb(202, 201, 201);
+    }
+
+    .section {
+      /* background-color: aliceblue; */
+      margin-bottom: 50px;
+    }
+
+    table,
+    td,
+    th {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+
+    tfoot {
+      text-align: left;
+    }
+
+    .heightlight {
+      background-color: gold;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    video {
+      width: 500px;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <!-- Catlog -->
+    <div class="section">
+      <h1 class="topic">HTML Basics</h1>
+      <ul class="catlog">
+        <li><a href="#head-section">Head Section</a></li>
+        <li><a href="#text">Text</a></li>
+        <li><a href="#entities">Entities</a></li>
+        <li><a href="#hyperlinks">Hyperlinks</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#video-and-audio">Video&Audio</a></li>
+        <li><a href="#list">List</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#containers">Containers</a></li>
+        <li><a href="#semantic-elements">Semantic Elements</a></li>
+        <li><a href="#strcturing">Strcturing a Web Page</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </div>
+    <!-- Content -->
+    <div>
+      <!-- Head Section -->
+      <div class="section">
+        <h2 class="title" id="head-section">Head Section</h2>
+        <div class="codeBlock">
+          <pre>
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang=&quot;en&quot;&gt;
+                  &lt;head&gt;
+                  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                  &lt;meta
+                      name=&quot;viewport&quot;
+                      content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+                  &lt;title&gt;Document&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;&lt;/body&gt;
+              &lt;/html&gt;
+            </pre
+          >
+        </div>
+        <hr />
+        <h3 class="subtitle">Lang</h3>
+        <div class="codeBlock">
+          <pre>
+              &lt;html lang=&quot;en&quot;&gt;  
+            </pre
+          >
+        </div>
+        <p>
+          <strong>lang</strong> is used to describe the language of the page,
+          the Chinese specification is zh-cmn-Hans, but also common zh-CN
+        </p>
+        <hr />
+        <h3 class="subtitle">Meta(required)</h3>
+        <div class="codeBlock">
+          <pre>
+              &lt;meta charset=&quot;UTF-8&quot;&gt;
+              &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            </pre
+          >
+        </div>
+        <p>
+          <strong>charset:</strong> the character encoding set is a general term
+          for various scripts and symbols, including various national scripts,
+          punctuation marks, graphic symbols, numbers, etc. UTF-8 is usually
+          used, which is the most comprehensive character set. There are many
+          more, such as ASCII, etc.
+        </p>
+        <p>
+          <strong>viewport:</strong> the visible window size, is used to display
+          that part of the web page
+        </p>
+        <p>
+          <strong>content:</strong> content is set to ensure the best display
+        </p>
+        <p>
+          <strong
+            >These are the two metadata that must be included in the HTML base
+            framework</strong
+          >
+        </p>
+        <hr />
+        <h3 class="subtitle">Meta(optional)</h3>
+        <div class="codeBlock">
+          <pre>
+              &lt;meta name=&quot;keywords&quot; content=&quot;HTML, CSS&quot;&gt;
+              &lt;meta name=&quot;desription&quot; content=&quot;...&quot;&gt;
+              more...
+            </pre
+          >
+        </div>
+        <p>
+          <strong>keywords: </strong>commonly used in the past to provide
+          keyword indexing to search engines, but now is obsolete, but still
+          available
+        </p>
+        <p>
+          <strong>description:</strong> used to describe the content of the
+          page, the search engine will be displayed in its pages according to
+          the content provided
+        </p>
+        <hr />
+        <h3 class="subtitle">Title</h3>
+        <div class="codeBlock">
+          <pre>
+              &lt;title&gt;Document&lt;/title&gt;
+            </pre
+          >
+        </div>
+      </div>
+      <!-- Text Section -->
+      <div class="section">
+        <h2 class="title" id="text">Text</h2>
+        <hr />
+        <h3 class="subtitle">p tag</h3>
+        <p>I love to teach you HTML!</p>
+        <p>I love to teach you <em>HTML</em>!</p>
+        <p>I love to teach you <i>HTML</i>!</p>
+        <p>I love to teach you <strong>HTML</strong>!</p>
+        <p>I love to teach you <b>HTML</b>!</p>
+        <div class="codeBlock">
+          <pre>
+              &lt;h2 class=&quot;title&quot; id=&quot;text&quot;&gt;Text&lt;/h2&gt;
+              &lt;p&gt;I love to teach you HTML!&lt;/p&gt;
+              &lt;p&gt;I love to teach you &lt;em&gt;HTML&lt;/em&gt;!&lt;/p&gt;
+              &lt;p&gt;I love to teach you &lt;i&gt;HTML&lt;/i&gt;!&lt;/p&gt;
+              &lt;p&gt;I love to teach you &lt;strong&gt;HTML&lt;/strong&gt;!&lt;/p&gt;
+              &lt;p&gt;I love to teach you &lt;b&gt;HTML&lt;/b&gt;!&lt;/p&gt;
+            </pre
+          >
+        </div>
+        <p><strong>p: </strong>the regular text tag</p>
+        <p>
+          <strong>em: </strong>emphasis tag, usually used to emphasize the
+          important content of the HTML document, but does not mean that the
+          need to emphasize the use of the tag. Because this tag is mainly used
+          to search engines for fast indexing. Any style must be done using CSS,
+          so that the standard practice!
+        </p>
+        <p>
+          <strong>i: </strong>Italian italic tag, change the font to Italian
+          italic
+        </p>
+        <p>
+          <strong>strong: </strong>bold tag, usually used to emphasize the very
+          important or very urgent content, the same reason is to the search
+          engine use
+        </p>
+        <p><strong>b: </strong>bold tags, bold font</p>
+        <p><strong>The above except p are not recommended to use</strong></p>
+        <hr />
+        <h3 class="subtitle">Heading tag</h3>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <div class="codeBlock">
+          <pre>
+              &lt;h1&gt;Heading 1&lt;/h1&gt;
+              &lt;h2&gt;Heading 2&lt;/h2&gt;
+              &lt;h3&gt;Heading 3&lt;/h3&gt;
+              &lt;h4&gt;Heading 4&lt;/h4&gt;
+              &lt;h5&gt;Heading 5&lt;/h5&gt;
+              &lt;h6&gt;Heading 6&lt;/h6&gt;
+            </pre
+          >
+        </div>
+      </div>
+      <!-- Entities Section -->
+      <div class="section">
+        <h2 class="title" id="entities">Entities</h2>
+        <hr />
+        <h3 class="subtitle">Entity Coding</h3>
+        <p>I love to teach you &lt;HTML&gt;!</p>
+        <div class="codeBlock">
+          <pre>
+&lt;p&gt;I love to teach you &amp;lt;HTML&amp;gt;!&lt;/p&gt;</pre
+          >
+        </div>
+        <p>
+          For &lt;HTML&gt; to display properly, entity encoding, which similar
+          to escape characters, is used
+        </p>
+        <p>Entity encoding usually starts with & and ends with ;</p>
+        <p>
+          The lt in the code box is meant to be an abbreviation for less than,
+          and the gt is an abbreviation for greater than
+        </p>
+        <hr />
+        <h3 class="subtitle">Common entity codes</h3>
+        <div class="codeBlock">
+          <pre>&amp;lt; &amp;gt; &amp;copy; &amp;nbsp;</pre>
+        </div>
+      </div>
+      <!-- Hyperlinks Section-->
+      <div class="section">
+        <h2 class="title" id="hyperlinks">Hyperlinks</h2>
+        <div class="codeBlock">
+          <pre>
+              &lt;a herf=&quot;http://google.com/&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;
+              &lt;a herf=&quot;#section-1&quot;&gt;&lt;/a&gt;
+              &lt;h1 id=&quot;section-1&quot;&gt;
+                  Content
+              &lt;/h1&gt;
+            </pre
+          >
+        </div>
+        <p><strong>a:</strong> Anchor, tag can be a hyperlink or an anchor</p>
+        <p>
+          <strong>herf:</strong> Hypertext Reference, means the URL specifying
+          the target of the hyperlink. the value of the href attribute can be
+          the relative or absolute URL of any valid document, including fragment
+          identifiers and JavaScript snippets
+        </p>
+        <p><strong>relative path:</strong> .../coffee</p>
+        <p><strong>absolute path:</strong> fancyshawn.com/coffee</p>
+        <p>
+          <strong>target:</strong> usually followed by a tab in the jump page,
+          with the content entered as <strong>_blank</strong> meaning open a new
+          tab
+        </p>
+        <p>
+          <strong>Anchor point:</strong> used for positioning within the page
+          fixed point (click on the corresponding position automatically slide
+          down), first have to create an anchor point, select a tag to be
+          positioned, give id="section-name", and then in a tag enter
+          #section-name that can be. (If left blank with only #, then jump back
+          to the top of the page)
+        </p>
+      </div>
+      <!-- Images -->
+      <div class="section">
+        <h2 class="title" id="images">Images</h2>
+        <img
+          src="img/coffee1.jpg"
+          alt="A coffee mug on a table."
+          style="object-fit: cover"
+        />
+        <div class="codeBlock">
+          <pre>
+&lt;img src=&quot;image/coffee.jpg&quot; alt=&quot;A coffee mug on a table.&quot; style=&quot;object-fit: cover&quot;/&gt;</pre
+          >
+        </div>
+        <p>
+          <strong>img:</strong> image tags generally use self-closing &lt; /
+          &gt;, nowadays the syntax can be written without self-closing. (But it
+          seems that when writing React, you still have to write it, so get used
+          to it)
+        </p>
+        <p>
+          <strong>src:</strong> the image source, fill in the relative or
+          absolute path
+        </p>
+        <p>
+          <strong>alt:</strong> Alter, text description, used to display when
+          the image can not be loaded correctly, but also to help search engines
+          understand what we put the image here is, it is highly recommended to
+          write meaningful content
+        </p>
+        <p>
+          <strong>object-fit:</strong> one of the CSS styles, fill in cover to
+          keep the image from being stretched and distorted
+        </p>
+      </div>
+      <!-- Video & Audio -->
+      <div class="section">
+        <h2 class="title" id="video-and-audio">Video&Audio</h2>
+        <video controls autoplay loop src="media/video.mp4">
+          Your browser dosen't support video component
+        </video>
+        <div class="codeBlock">
+          <pre>
+              &lt;video contorls autoplay loop src=&quot;media/ocean.mp4&quot;&gt;Your browser dosen't support video component.&lt;/video&gt;
+              &lt;audio contorls autoplay loop src=&quot;media/forest.mp3&quot;&gt;Your browser dosen't support audio component.&lt;/audio&gt;
+            </pre
+          >
+        </div>
+        <p>
+          The usage of video and audio is similar, so we will only talk about
+          one in detail here
+        </p>
+        <p>
+          <strong>controls, autoplay, loop:</strong> these three options
+          represent controls, autoplay, and loop respectively. They are Boolean
+          types, but cannot be assigned true or false!
+        </p>
+        <p>
+          You can write content between tags, which will be displayed when the
+          browser does not support this component
+        </p>
+      </div>
+      <!-- List Section-->
+      <div class="section">
+        <h2 class="title" id="list">List</h2>
+        <hr />
+        <h3 class="subtitle">Unordered List</h3>
+        <ul>
+          <li>About me</li>
+          <li>Courses</li>
+          <li>Subscribe</li>
+          <li>Contact me</li>
+        </ul>
+        <div class="codeBlock">
+          <pre>
+              &lt;ul&gt;
+                &lt;li&gt;About me&lt;/li&gt;
+                &lt;li&gt;Courses&lt;/li&gt;
+                &lt;li&gt;Subscribe&lt;/li&gt;
+                &lt;li&gt;Contact me&lt;/li&gt;
+              &lt;/ul&gt;
+            </pre
+          >
+        </div>
+        <p>
+          <strong>ul:</strong> Unordered List, an unordered list, usually can be
+          made into a navigation bar or put pictures or something
+        </p>
+        <p>
+          <strong>li:</strong> List Item, a list element that holds your content
+        </p>
+        <hr />
+        <h3 class="subtitle">Ordered List</h3>
+        <ol>
+          <li>Preheat the oven</li>
+          <li>Place the ingridents on the crust</li>
+          <li>Put the pizza in the oven for 20 minutes</li>
+        </ol>
+        <div class="codeBlock">
+          <pre>
+              &lt;ol&gt;
+                &lt;li&gt;Preheat the oven.&lt;/li&gt;
+                &lt;li&gt;Place the ingridents on the crust.&lt;/li&gt;
+                &lt;li&gt;Put the pizza in the oven for 20 minutes.&lt;/li&gt;
+              &lt;/ol&gt;
+            </pre
+          >
+        </div>
+        <p>
+          <strong>ol:</strong> Ordered List, similar to unordered, except that
+          each element has an ordinal number
+        </p>
+        <hr />
+        <h3 class="subtitle">Description List</h3>
+        <dl style="margin-left: 20px">
+          <dt>HTML</dt>
+          <dd>Hypertext Markup Language</dd>
+          <dt>CSS</dt>
+          <dt></dt>
+          <dd>Cascading Stylesheets1</dd>
+          <dd>Cascading Stylesheets2</dd>
+        </dl>
+        <div class="codeBlock">
+          <pre>
+              &lt;dl&gt;
+                &lt;dt&gt;HTML&lt;/dt&gt;
+                &lt;dd&gt;Hypertext Markup Language&lt;/dd&gt;
+                &lt;dt&gt;CSS&lt;dt&gt;
+                &lt;dd&gt;Cascading Stylesheets1&lt;/dd&gt;
+                &lt;dd&gt;Cascading Stylesheets2&lt;/dd&gt;
+              &lt;/dl&gt; 
+            </pre
+          >
+        </div>
+        <p><strong>dl:</strong> Description List, description list</p>
+        <p><strong>dt:</strong> Description Title, description title</p>
+        <p><strong>dd:</strong> Description Detail, description content</p>
+      </div>
+      <!-- Tables Section-->
+      <div class="section">
+        <h2 class="title" id="tables">Tables</h2>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Expenses</th>
+            </tr>
+            <tr>
+              <th>Category</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Marketing</td>
+              <td>$100</td>
+            </tr>
+            <tr>
+              <td>Accounting</td>
+              <td>$100</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Total</td>
+              <td>$300</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="codeBlock">
+          <pre>
+          &lt;table&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th colspan=&quot;2&quot;&gt;Expenses&lt;/th&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Category&lt;/th&gt;
+                &lt;th&gt;Amount&lt;/th&gt;
+              &lt;/tr&gt;
+  
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Marketing&lt;/td&gt;
+                &lt;td&gt;$100&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Accounting&lt;/td&gt;
+                &lt;td&gt;$100&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+  
+            &lt;tfoot&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Total&lt;/td&gt;
+                &lt;td&gt;$300&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tfoot&gt;
+          &lt;/table&gt;
+          </pre>
+        </div>
+        <p><strong>table:</strong> table label</p>
+        <p><strong>tr:</strong> Table Row</p>
+        <p><strong>th:</strong> Table Heading</p>
+        <p><strong>td:</strong> Table Data</p>
+        <p>
+          <strong>thead:</strong> Table Head, not the same as th above, this is
+          the name of the table (generally for the convenience of search
+          engines, the structure is also more clear). With thead after the need
+          to put tr>th tag inside thead.
+        </p>
+        <p>
+          <strong>tbody:</strong> Table Body, with thead similar function, the
+          same rules
+        </p>
+        <p>
+          <strong>tfoot:</strong> Table Footer, similar to thead, the same rules
+        </p>
+        <p>
+          Related CSS styles:
+          <strong>border, border-collapse, padding</strong> refers to the outer
+          border of the table, the table gap and the inner spacing (applied to
+          the text, is the distance between the text and the border),
+          respectively. The th has a <strong>colspan</strong> which is the
+          column width, the default is 1. The <strong>text-align</strong> of
+          tfoot is the text alignment direction
+        </p>
+      </div>
+      <!-- Containers Section-->
+      <div class="section">
+        <h2 class="title" id="containers">Containers</h2>
+        <hr />
+        <h3 class="subtitle">div</h3>
+        <div class="heightlight">Lorem</div>
+        <p>ipsum dolor sit amet consectetur adipisicing elit</p>
+        <p>
+          <strong>div:</strong> a container tag, is a Block-level element. These
+          tags always start on a new line and fill the entire line space by
+          default, unless changed with CSS styles
+        </p>
+        <hr />
+        <h3 class="subtitle">span</h3>
+        <p>
+          <span class="heightlight">Lorem</span> ipsum dolor sit amet
+          consectetur adipisicing elit
+        </p>
+        <p>
+          <strong>span:</strong> container tag, usually loaded with text,
+          belongs to Inline Element inline element, which only works inside the
+          line, setting the width and height does not work, and does not affect
+          the text content, making it line feed, etc., while vertical
+          orientation and spacing also do not work
+        </p>
+      </div>
+      <!-- Semantic Elements Section -->
+      <div class="section">
+        <h2 class="title" id="semantic-elements">Semantic Elements</h2>
+        <article class="article">
+          <h1>Heading</h1>
+          <p>
+            Published
+            <time datetime="2021-01-01 17:00">January 1 2021 05:00pm</time>
+          </p>
+          <p>
+            <mark>Lorem</mark> ipsum dolor sit amet consectetur adipisicing
+            elit. Voluptate voluptatum vero sapiente, eveniet natus&nbsp;dolorum
+            qui iure voluptatibus maiores at ad nemo odio sunt dolores
+            laboriosam quod, iusto ullam aliquid! Excepturi, recusandae fugit?
+            Est nam delectus unde, sapiente ex minima possimus alias sint
+            architecto eveniet iste aliquid tenetur repellat consectetur.
+          </p>
+          <figure>
+            <img src="img/coffee2.jpg" alt="a cup of coffee" />
+            <figcaption>My coffee this morning</figcaption>
+          </figure>
+        </article>
+        <div class="codeBlock">
+          <pre>
+            &lt;article class=&quot;article&quot;&gt;
+              &lt;h1&gt; Heading&lt;/h1&gt;
+              &lt;p&gt;Published &lt;time datetime=&quot;2021-01-01 17:00&quot;&gt;January 1 2021 05:00pm&lt;/time&gt;&lt;/p&gt;
+              &lt;p&gt;
+                &lt;mark&gt;Lorem&lt;/mark&gt; 
+                ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatum vero sapiente, eveniet natus&amp;nbsp;dolorum qui iure voluptatibus 
+                maiores at ad nemo odio sunt dolores laboriosam quod, iusto ullam aliquid! Excepturi, recusandae fugit? Est nam delectus unde, sapiente 
+                ex minima possimus alias sint architecto eveniet iste aliquid tenetur repellat consectetur.
+              &lt;/p&gt;
+              &lt;figure&gt;
+              &lt;img src=&quot;img/coffee2.jpg&quot; alt=&quot;My coffee this morning&quot;&gt;
+                &lt;figcaption&gt;My coffe this morning&lt;/figcaption&gt;
+              &lt;/figure&gt;
+            &lt;/article&gt;
+          </pre>
+        </div>
+        <p>
+          <strong>article tag:</strong> can usually hold forum posts, comments,
+          product displays, etc
+        </p>
+        <p>
+          <strong>figure tag:</strong> specifies separate stream content
+          (images, diagrams, photos, code, etc.). The content of the figure
+          element should be related to the main content, but should not affect
+          the document stream if it is removed. A title description is also
+          usually added to the feature using figcaption, as shown above
+        </p>
+        <p><strong>mark tag:</strong> highlighting effect</p>
+        <p>
+          <strong>time tag:</strong> the display effect is no different from the
+          regular text, usually with the datetime option, the format is
+          "2021-01-01 17:00", it must be the month and date of two
+        </p>
+      </div>
+      <!-- Strcturing a Web Page -->
+      <div class="section">
+        <h2 class="title" id="strcturing">Strcturing a Web Page</h2>
+        <p>
+          The <strong>header tag</strong> is usually used to introduce the
+          structure of a web page, and is usually used for the navigation bar
+        </p>
+        <p>
+          The <strong>nav tag</strong> is usually used for the navigation bar
+        </p>
+        <p>
+          The <strong>main tag</strong> is usually used to contain the main
+          content of the page, and a page can
+          <strong>only have one</strong> main tag, otherwise it will report an
+          error during the specification validation
+        </p>
+        <p>
+          The <strong>section tag</strong> is usually used to sort and manage
+          the related content. The heading tag is required to use section,
+          otherwise an error will be reported when going to the specification
+          validation
+        </p>
+        <p>
+          The <strong>aside tag</strong> is usually used to distinguish content
+          that is not directly related to the content in main
+        </p>
+        <p>
+          The <strong>footer tag</strong> is usually used to contain information
+          such as copyright, collaboration, and filing
+        </p>
+      </div>
+      <!-- Summary Section -->
+      <div class="section">
+        <h2 class="title" id="summary">Summary</h2>
+        <h3>Always write code in a standard way</h3>
+        <h3>Just remember a few of the common tags</h3>
+      </div>
+    </div>
+  </body>
+</html>

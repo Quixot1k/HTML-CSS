@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Constraint Validation</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">Username</label>
+      <input type="text" id="username" value="" required /><br />
+      <label for="">Password</label>
+      <input
+        type="password"
+        id="password"
+        pattern="^\d{6}$"
+        oninput="checkCustomValidity(this,6)"
+        required
+      /><br />
+      <label for="">E-mail</label>
+      <input type="email" id="email" value="abc@123.com" /><br />
+      <input type="submit" value="submit" />
+    </form>
+
+    <script>
+      /* ValidityState{
+            badInput: false
+            customError: false
+            patternMismatch: false
+            rangeOverflow: false
+            rangeUnderflow: false
+            stepMismatch: false
+            tooLong: false
+            tooShort: false
+            typeMismatch: false
+            valid: true
+            valueMissing: false */
+      let email = document.getElementById("email");
+      console.log("email validity", email.validity);
+
+      /*checkValidity*/
+      let username = document.getElementById("username");
+      if (!username.checkValidity()) {
+        // alert("please input your username")
+      }
+
+      /*setCustomValidity*/
+      let pwd = document.getElementById("password");
+      function checkCustomValidity(obj, length) {
+        console.log("pwd validity:", pwd.validity);
+        obj.value = obj.value.substr(0, length);
+        if (obj.validity.patternMismatch === true) {
+          obj.setCustomValidity("Must be at most 6 numbers!");
+        } else {
+        }
+      }
+    </script>
+  </body>
+</html>

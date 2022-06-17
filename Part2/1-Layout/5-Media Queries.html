@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      .box {
+        background: gold;
+        padding: 1rem;
+      }
+      .box:nth-child(2n) {
+        background: dodgerblue;
+      }
+      @media screen and (max-width: 600px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          pariatur dolore voluptates cumque temporibus. Libero corporis
+          distinctio dolorem accusamus, iusto quasi voluptatem maiores amet
+          mollitia quidem similique perferendis enim ratione, beatae nesciunt
+          blanditiis asperiores, sint repudiandae sed. Quo molestias iusto
+          perferendis pariatur fuga hic ut, neque suscipit iste, quos mollitia?
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas odit
+          quas eius quo non et magni vero alias debitis dicta neque ipsa fuga
+          numquam excepturi repudiandae aut nesciunt cum provident illum maiores
+          a, molestias tempore quis. Earum numquam, voluptatem commodi quam
+          deserunt molestias harum expedita obcaecati, est pariatur assumenda
+          aliquid.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

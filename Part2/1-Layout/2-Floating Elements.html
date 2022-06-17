@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tweet {
+        border: 3px solid gray;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .avatar {
+        width: 5rem;
+        height: 5rem;
+        background-color: gold;
+        float: left;
+        margin-right: 0.5rem;
+      }
+      .content {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="tweet clearfix">
+      <div class="avatar"></div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p class="content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae dolorem
+        ad nihil aliquid incidunt. Quidem odit quae blanditiis! Explicabo,
+        aperiam eligendi. Iure perspiciatis, quis unde minima eius illo qui
+        itaque necessitatibus quae, quaerat tempora temporibus autem officia
+        ipsa, fugit at et dolore reiciendis ratione atque recusandae optio
+        quisquam! Molestiae, aperiam.
+      </p>
+    </article>
+  </body>
+</html>

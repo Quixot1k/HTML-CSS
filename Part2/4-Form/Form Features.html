@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Features</title>
+  </head>
+  <body>
+    <!-- 表单中有上传文件，需要添加 enctype="multipart/form-data" 字段 -->
+    <form action="HTML-Form.html" method="post" enctype="multipart/form-data">
+      <label for="">Username</label><br />
+      <input type="text" name="username" required /><br />
+
+      <label for="">Password</label><br />
+      <input type="text" name="password" maxlength="16" required /><br />
+
+      <!-- for: 当选中该label时，input框也会同时被选中-->
+      <!-- label for = input id -->
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="1" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="0" /><br />
+
+      <!-- datalist和select相比，优点表现在可以进行模糊匹配 -->
+      <!-- input list = datalist id -->
+      <label for="">Location</label>
+      <input type="text" list="location" />
+      <datalist id="location">
+        <option>California</option>
+        <option>Texas</option>
+        <option>New Jersy</option>
+        <option>Philadelphia</option>
+        <option>Others</option></datalist
+      ><br />
+
+      <label for="">Bio</label>
+      <input type="file" /><br />
+
+      <input type="submit" name="signup" value="Sign Up" />
+    </form>
+  </body>
+</html>
